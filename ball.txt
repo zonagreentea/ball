@@ -1,0 +1,234 @@
+Last login: Thu Jan  8 16:27:32 on ttys000
+zonagreentea@ZonaBook-Pro ~ % cd ~/osu_megamix && git rev-parse --is-inside-work-tree >/dev/null && git status -sb && git diff --stat && git add -u && git commit -m 'imagination* 3b' && git show --oneline --stat -1 && git status -sb
+
+## HEAD (no branch)
+?? osu_megamix/
+HEAD detached from a2-r4
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	osu_megamix/
+
+nothing added to commit but untracked files present (use "git add" to track)
+zonagreentea@ZonaBook-Pro osu_megamix % cd ~/osu_megamix/osu_megamix
+
+zonagreentea@ZonaBook-Pro osu_megamix % git rev-parse --show-toplevel
+
+/Users/zonagreentea/osu_megamix/osu_megamix
+zonagreentea@ZonaBook-Pro osu_megamix % git switch -c imagination-3b
+
+Switched to a new branch 'imagination-3b'
+zonagreentea@ZonaBook-Pro osu_megamix % git status -sb && git add . && git commit -m 'imagination* 3b' && git show --oneline --stat -1
+
+## imagination-3b
+On branch imagination-3b
+nothing to commit, working tree clean
+zonagreentea@ZonaBook-Pro osu_megamix % bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ ~/Work/ball
+bash: /Users/zonagreentea/Work/ball: No such file or directory
+bash-3.2$ cd ~
+bash-3.2$ pwd
+/Users/zonagreentea
+bash-3.2$ 
+bash-3.2$ mkdir -p ~/Work
+bash-3.2$ cd ~/Work
+bash-3.2$ pwd
+/Users/zonagreentea/Work
+bash-3.2$ mkdir ball
+bash-3.2$ cd ball
+bash-3.2$ pwd
+/Users/zonagreentea/Work/ball
+bash-3.2$ git init
+Initialized empty Git repository in /Users/zonagreentea/Work/ball/.git/
+bash-3.2$ cat > README.md <<'MD'
+> # ball
+> 
+> Systems analysis and prototyping for software and interactive systems.
+> MD
+bash-3.2$ cat README.md
+# ball
+
+Systems analysis and prototyping for software and interactive systems.
+bash-3.2$ git add README.md
+bash-3.2$ git commit -m "ball: initial identity"
+[main (root-commit) 95096d2] ball: initial identity
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+bash-3.2$ zsh
+zonagreentea@ZonaBook-Pro ball % git add README.md
+git commit -m "ball: initial identity"
+
+On branch main
+nothing to commit, working tree clean
+zonagreentea@ZonaBook-Pro ball % cd ~/Work/ball
+git status -sb
+
+## main
+zonagreentea@ZonaBook-Pro ball % git branch -M main
+
+zonagreentea@ZonaBook-Pro ball % command -v gh
+
+/usr/local/bin/gh
+zonagreentea@ZonaBook-Pro ball % gh repo create ball --public --source=. --remote=origin --push
+
+✓ Created repository zonagreentea/ball on github.com
+  https://github.com/zonagreentea/ball
+✓ Added remote https://github.com/zonagreentea/ball.git
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/zonagreentea/ball.git
+ * [new branch]      HEAD -> main
+branch 'main' set up to track 'origin/main'.
+✓ Pushed commits to https://github.com/zonagreentea/ball.git
+zonagreentea@ZonaBook-Pro ball % git remote add origin https://github.com/YOUR_USERNAME/ball.git
+git push -u origin main
+
+error: remote origin already exists.
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+zonagreentea@ZonaBook-Pro ball % git remote add origin https://github.com/YOUR_USERNAME/ball.git
+git push -u origin main
+
+error: remote origin already exists.
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+zonagreentea@ZonaBook-Pro ball % git remote -v
+git log --oneline --decorate -1
+
+origin	https://github.com/zonagreentea/ball.git (fetch)
+origin	https://github.com/zonagreentea/ball.git (push)
+95096d2 (HEAD -> main, origin/main) ball: initial identity
+zonagreentea@ZonaBook-Pro ball % https://github.com/YOUR_USERNAME/ball
+
+zsh: no such file or directory: https://github.com/YOUR_USERNAME/ball
+zonagreentea@ZonaBook-Pro ball % bash
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ https://github.com/YOUR_USERNAME/ball
+bash: https://github.com/YOUR_USERNAME/ball: No such file or directory
+bash-3.2$ 
+bash-3.2$ cd ~/Work/ball
+bash-3.2$ git status -sb
+## main...origin/main
+bash-3.2$ git remote -v
+origin	https://github.com/zonagreentea/ball.git (fetch)
+origin	https://github.com/zonagreentea/ball.git (push)
+bash-3.2$ 
+bash-3.2$ cd ~/Work/ball || exit 1
+bash-3.2$ git status -sb
+## main...origin/main
+?? ball.png
+bash-3.2$ git remote -v
+origin	https://github.com/zonagreentea/ball.git (fetch)
+origin	https://github.com/zonagreentea/ball.git (push)
+bash-3.2$ git branch --show-current
+main
+bash-3.2$ 
+bash-3.2$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+bash-3.2$ git branch -M main
+bash-3.2$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+bash-3.2$ git remote add origin https://github.com/zonagreentea/ball.git
+error: remote origin already exists.
+bash-3.2$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+bash-3.2$ cd ~/Work/ball
+bash-3.2$ mkdir -p ops
+bash-3.2$ cat > ops/payments.md <<'MD'
+> # ball – payments (private)
+> 
+> Default PayPal payment link:
+> https://www.paypal.com/ncp/payment/PV5VCJGG7B3FL
+> 
+> Use only after scope + price are agreed.
+> MD
+bash-3.2$ echo "ops/" >> .gitignore
+bash-3.2$ git add .gitignore
+bash-3.2$ git commit -m "ball: ignore private ops"
+[main b8d9768] ball: ignore private ops
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+bash-3.2$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/zonagreentea/ball.git
+   95096d2..b8d9768  main -> main
+bash-3.2$ cat > ~/bin/ball-pay <<'SH'
+> #!/bin/sh
+> printf '%s' "https://www.paypal.com/ncp/payment/PV5VCJGG7B3FL" | pbcopy
+> echo "ball payment link copied"
+> SH
+bash: /Users/zonagreentea/bin/ball-pay: No such file or directory
+bash-3.2$ chmod +x ~/bin/ball-pay
+chmod: /Users/zonagreentea/bin/ball-pay: No such file or directory
+bash-3.2$ cat > ~/bin/ball-pay <<'SH'
+> #!/bin/sh
+> printf '%s' "https://www.paypal.com/ncp/payment/PV5VCJGG7B3FL" | pbcopy
+> echo "ball payment link copied"
+> SH
+bash: /Users/zonagreentea/bin/ball-pay: No such file or directory
+bash-3.2$ chmod +x ~/bin/ball-pay
+chmod: /Users/zonagreentea/bin/ball-pay: No such file or directory
+bash-3.2$ ball-pay
+bash: ball-pay: command not found
+bash-3.2$ mkdir -p ~/bin
+bash-3.2$ cat > ~/bin/ball-pay <<'SH'
+> #!/bin/sh
+> printf '%s' "https://www.paypal.com/ncp/payment/PV5VCJGG7B3FL" | pbcopy
+> echo "ball payment link copied"
+> SH
+bash-3.2$ chmod +x ~/bin/ball-pay
+bash-3.2$ grep -q 'HOME/bin' ~/.zshrc 2>/dev/null || echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc
+bash-3.2$ source ~/.zshrc
+bash-3.2$ ball-pay
+ball payment link copied
+bash-3.2$ pbpaste
+https://www.paypal.com/ncp/payment/PV5VCJGG7B3FLbash-3.2$ https://www.paypal.com/ncp/payment/PV5VCJGG7B3FL
+bash: https://www.paypal.com/ncp/payment/PV5VCJGG7B3FL: No such file or directory
+bash-3.2$ cd ~/Work/ball
+bash-3.2$ git add ball.png
+bash-3.2$ git commit -m "ball: add mark"
+[main f5a04c6] ball: add mark
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 ball.png
+bash-3.2$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 5.45 KiB | 5.46 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/zonagreentea/ball.git
+   b8d9768..f5a04c6  main -> main
+bash-3.2$ echo "ball.png" >> .gitignore
+bash-3.2$ git add .gitignore
+bash-3.2$ git commit -m "ball: ignore local assets"
+[main 327f62b] ball: ignore local assets
+ 1 file changed, 1 insertion(+)
+bash-3.2$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 359 bytes | 359.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/zonagreentea/ball.git
+   f5a04c6..327f62b  main -> main
+bash-3.2$ 
