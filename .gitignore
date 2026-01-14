@@ -1,3 +1,16 @@
 ops/
 ball.png
 ops/
+
+# variance prune
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+build/
+builddir/
+.venv/
+__pycache__/
+*.log
+*.tmp
+
